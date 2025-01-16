@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Fit content</title>
+
+    <style>
+        .container{
+            border: 2px solid black;
+            padding: 16px;
+            width: 300px;
+            margin-bottom: 16px;;
+        }
+
+        .item{
+            background-color: blueviolet;
+            margin-bottom: 10px;
+            padding: 5px; /*espaçamento interno*/
+        }
+
+        .fit-content .item{
+            width: fit-content; /*deixa a largura dos item na largura do conteudo que ta escrito*/
+        }
+
+        .min-content .item{
+            width: min-content; /*pega o tamanho da maior palavra e coloca esse tamanho no bloco/paragrafo todo. O menor conteudo possivel*/
+        }
+
+        .max-content .item{
+            width: max-content; /*pega o tamanho do paragrafo e transforma em uma linha. O maior conteudo possivel*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container fit-content">
+        <div class="item">Lorem</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, qui.</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis aut alias perferendis soluta voluptate quo laudantium expedita eos voluptas amet? Ex officia provident omnis nesciunt?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate at voluptas qui maiores, nihil suscipit vero quisquam repellendus provident eligendi consequuntur fugit deserunt reiciendis quas est? Atque minus temporibus voluptatem, velit corporis mollitia, fugit beatae veniam repellat ea nulla saepe nihil reiciendis a hic nesciunt? Quis maxime nemo ratione, inventore, id voluptates voluptate magni quod blanditiis aspernatur et eaque consectetur accusantium repellat veritatis aut vero hic voluptatem consequuntur exercitationem laboriosam dolorum officiis! Exercitationem, tempora id!</div>
+    </div>
+
+    <div class="container min-content">
+        <div class="item">Lorem</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, qui.</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis aut alias perferendis soluta voluptate quo laudantium expedita eos voluptas amet? Ex officia provident omnis nesciunt?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate at voluptas qui maiores, nihil suscipit vero quisquam repellendus provident eligendi consequuntur fugit deserunt reiciendis quas est? Atque minus temporibus voluptatem, velit corporis mollitia, fugit beatae veniam repellat ea nulla saepe nihil reiciendis a hic nesciunt? Quis maxime nemo ratione, inventore, id voluptates voluptate magni quod blanditiis aspernatur et eaque consectetur accusantium repellat veritatis aut vero hic voluptatem consequuntur exercitationem laboriosam dolorum officiis! Exercitationem, tempora id!</div>
+    </div>
+
+    <div class="container max-content">
+        <div class="item">Lorem</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, qui.</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis aut alias perferendis soluta voluptate quo laudantium expedita eos voluptas amet? Ex officia provident omnis nesciunt?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate at voluptas qui maiores, nihil suscipit vero quisquam repellendus provident eligendi consequuntur fugit deserunt reiciendis quas est? Atque minus temporibus voluptatem, velit corporis mollitia, fugit beatae veniam repellat ea nulla saepe nihil reiciendis a hic nesciunt? Quis maxime nemo ratione, inventore, id voluptates voluptate magni quod blanditiis aspernatur et eaque consectetur accusantium repellat veritatis aut vero hic voluptatem consequuntur exercitationem laboriosam dolorum officiis! Exercitationem, tempora id!</div>
+    </div>
+    
+</body>
+</html>

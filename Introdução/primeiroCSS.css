@@ -1,0 +1,33 @@
+body{
+    background-color: lightcyan;
+}
+
+h1{ 
+    color: #8803ff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 54px;
+    text-decoration: underline;
+
+}
+h2{
+    font-size: 30px;
+    font-style: italic;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: normal;
+
+}
+p{ 
+    font-size: 12px;
+    text-align: letf;
+    color: #029e9e
+}
+
+.destaque {
+    color: #f44663;
+    font-weight: bold;
+}
+
+#titulo{
+    color: #efa7a7;
+}
