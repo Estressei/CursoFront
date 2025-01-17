@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox</title>
+
+    <style>
+        body{
+            margin-bottom: 500px;
+        }
+
+        .flexbox {
+            height: 250px;
+            border: 3px solid red;
+            display: flex; /*deixa o elementos filhos(div) em colunas, sem ele fica em linhas*/
+            margin-bottom: 16px;
+        }
+
+        .flexbox div {
+            border: 2px solid orange;
+            width: 150px; /*esse tamanho vai ate o tamanho do container, se passar, nao vai mudar, vai fica no tamanho maximo, sem quebrar linha, esta ligado ao flex-wrap do flexbox acima*/
+            margin: 15px;
+        }
+ 
+        .flex-container1 {
+            flex-wrap: nowrap; /*sem quebrar linha*/
+            flex-direction: row; /*padrão*/
+            flex-flow: row wrap; /*esse é um atalho para usar os dois juntos*/
+        }
+
+        .flex-container2 {
+            justify-content: flex-end; /*mexe com a HORIZONTAL, coloca os elementos no final do container, tem o center (que centraliza), o space-around (pega o espaço que sobra e coloca ao redor das div, porem o primeiro e ultimo fica com a metade do espaço nas beiradas), o space-between (o espaço que sobra e coloca apenas no meio, o primeiro e o ultimo fica colado na beiradas) e o space-evenly (parecido com o around, mas esse vai deixar sempre o mesmo espaço)*/
+        }
+
+        .flex-container2 div {
+            width: 30px;
+            margin: 0;
+        }
+
+        .flex-container3{
+            justify-content: space-around;
+            align-items: center; /*mexe com a VERTICAL, centraliza os elementos, tem o flex-end (coloca os elemtento la embaixo), o flex-start (coloca no começo), o stretch (o padrão), o baseline (veja ele no container4)*/
+        }
+
+        .flex-container3 div {
+            width: 30px;
+            margin: 0;
+        }
+
+        .flex-container4{
+            justify-content: space-around;
+            align-items: baseline; /*mexe com a VERTICAL, coloca tudo no começo, mas se tiver 1 elemento que é maior, pega ele como base e alinha os outro a ele)*/
+        }
+
+        .flex-container4 div {
+            width: 30px;
+            margin: 0;
+        }
+
+        .flex-container5 {
+            justify-content: center;
+            align-items: flex-end;
+            align-content: flex-start; /*alinha quando tem mais de 1 linha*/
+            flex-wrap: wrap; /*se tiver com wrap, ele gruda em cima, se tiver com nowrap, ele grupa embaixo. E por padrao, é o nowrap*/
+        }
+
+        .flex-container5 div {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="flexbox flex-container1">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+
+    <div class="flexbox flex-container2">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+
+    <div class="flexbox flex-container3">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+
+    <div class="flexbox flex-container4">
+        <div class="div1">1</div>
+        <div class="div2" style="font-size: 36px;">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+
+    <div class="flexbox flex-container5">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+    
+</body>
+</html>
