@@ -68,6 +68,83 @@
         .flex-container5 div {
             width: 100px;
         }
+
+        .flex-container6 {
+            justify-content: flex-end; /* colocou row e foi para o final do container, para direita, se coloca column, ele vai para a baixo*/
+            align-items: flex-start; /*colocou row e grudou na parte superior do container, com o column, ele foi pra esquerda*/
+            flex-direction: column;
+            height: 500px;
+        }
+
+        .flex-container6 div {
+            background-color: yellow;
+            width: 50px;
+            height: 50px;
+        }
+
+        .flex-container7 {
+            justify-content: flex-end;
+            align-items: flex-start; 
+            flex-direction: column;
+        }
+
+        .flex-container7 div {
+            background-color: orange;
+            width: 50px;
+            height: 50px;
+        }
+
+        .flex-container7 .div2 {
+            flex-basis: 100px; /*no row, é o mesmo que width, é a largura, porem ele sempre vai prevalecer ao width. Ja no column, ele vai ser a altura, height. E tem o auto tambem, que ele vai ver se tem um width/height para aquele elemento e vai manter o tamanho que esta nele.*/
+        }
+
+        .flex-container8 {
+            justify-content: center;
+            align-items: center;
+            gap: 15px; /*vai tratar dos espaços internos, ou seja, entre das divs*/
+        }
+
+        .flex-container8 div {
+            flex-basis: 50px; /*ou width da no mesmo*/
+            background-color: chocolate;
+            margin: 0;
+        }
+
+        .flex-container8 .div2 {
+            flex-grow: 1; /*pega o espaço que esta sobrando do lado da primeira e da ultima div e coloca tudo nesssa div2*/
+        }
+
+        .flex-container8 .div4 {
+            flex-grow: 2; /*quando tem mais de uma div usando flex-grow, vai dividir o espaço que esta sobrando do lado da primeira e da ultima div e colocar nas divs com essa propriedade. Nesse caso, são 2 unidades de medidas nessa div e 1 na div2. O valor padrão é 0*/
+        }
+
+        .flex-container9 {
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .flex-container9 div{
+            flex-basis: 150px; /*ou width da no mesmo*/
+            background-color: cyan;
+            margin: 0;
+        }
+
+        .flex-container9 .div1 {
+            flex-shrink: 2; /*ele dividi o espaço que falta, diferente do grow que é o espaço que sobra. Valor padrao é 1, ele diminui igual conforme for DIMINUINDO A JANELA, se colocar 2, vai diminuir mais a div1 doq as outras, e assim por diante.*/
+        }
+
+        .flex-container9 .div3 {
+            flex-shrink: 0; /*o valor 0 faz com que quando diminuiu, não mexe, ele vai ficar estagnado, as outras vão diminuir e ele nao. Nesse caso ele vai fica na largura de 150px*/
+        }
+
+        .flex-container9 .div2 {
+            flex-shrink: 3; /*nesse caso, essa div vai diminuir mais doq e div1*/
+        }
+
+        .flex-container9 .div4 {
+            flex: 1 3 200px; /*sendo o 1 para grow, 3 para shrink e 200 para basis*/
+        }
     </style>
 </head>
 
@@ -102,6 +179,34 @@
     </div>
 
     <div class="flexbox flex-container5">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+
+    <div class="flexbox flex-container6">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+
+    <div class="flexbox flex-container7">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+
+    <div class="flexbox flex-container8">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+
+    <div class="flexbox flex-container9">
         <div class="div1">1</div>
         <div class="div2">2</div>
         <div class="div3">3</div>
