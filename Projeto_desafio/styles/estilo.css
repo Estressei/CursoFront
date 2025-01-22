@@ -1,0 +1,101 @@
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #d1cfcf;
+    background-image: url(../imagens/bg-2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.hero{
+    padding: 1px;
+}
+
+.hero-content {
+    margin: 100px auto 0;
+    width: 80%;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1{
+    text-transform: uppercase;
+    font-size: 56px;
+    text-shadow: 2px 2px 2px black;
+    margin-bottom: 0;
+}
+
+.hero-content p {
+    background-color: rgb(0, 0, 0, .7);
+    font-size: 18px;
+    padding: 16px;
+    display: inline-block; /*pq nao quero que ocupe 100% da area*/
+    border-bottom: 2px solid;
+}
+
+.content-div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 860px;
+    margin: auto;
+    background-color: white;
+    padding: 16px;
+}
+
+.card {
+    flex-basis: 250px;
+    flex-grow: 1;
+}
+
+.card img {
+    width: 100%;
+    display: block; /*tranformo a imagem que era elemento de linha, para nao ficar um espaço entre a imagem e o paragrafo no browser*/
+}
+
+.card p {
+    background-color: #383636;
+    color: white;
+    margin: 0;
+    padding: 8px;
+}
+
+
+
+
+
+
+.bloco {
+    background-color: white;
+    width: 90%;
+    max-width: 860px;
+    max-height: 350px;
+}
+
+.bloco-ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /*quebrar linha se necessario*/
+    justify-content: center;
+    list-style-type: none;
+}
+
+.bloco-li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bloco-li__imagem img {
+    width: 200px;
+}
+
+.bloco-li__tipo {
+    background-color: gray;
+}
