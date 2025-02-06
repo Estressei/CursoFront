@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidade de medidas</title>
+
+    <style>
+        html {
+            font-size: 62.5%; /*62.5% vale 10px. Por causa daqui, o tamanho dos elementos filhos com em mudam.*/
+            padding-bottom: 550px;
+        }
+        h1{
+            font-size: 3.4em; /*34px*/
+        }
+
+        p {
+            font-size: 3em; /*30px*/
+            background-color: #ccc;
+        }
+
+        b{
+            color: red;
+            font-size: 1.5em; /*como esta dentro do p e ele vale 30px, se eu coloca 1em no b, ele vai continuar valendo 30px. Entao 1.5em equivale a 40px*/
+            font-size: 1rem; /*ja aqui, nao vai se relacionar com o elemento pai, que no caso o p, e sim com o html, ou seja, 1rem=10px*/
+            font-size: 100%; /*100% equivale o mesmo que 1em que é 30px, seu eu colocar 50%, vai equivaler 15px*/
+        }
+
+        .porcentagem{
+            width: 60%;
+            height: 500px; /*porcentagem nao funciona muito bem em height se o elemento pai nao tiver a mesma definida*/
+            background-color: yellow;
+        }
+
+        .porcentagem p{
+            padding: 10%; /*a porcentagem esta sempre relacionada com a largura(width) do elemento pai*/
+            background-color: orange;
+            width: 50%;
+            font-size: 1rem;
+        }
+
+        .padding-em{
+            background-color: cyan;
+            padding: 3em; /*30px*/
+        }
+
+        .padding-em p{
+            background-color: transparent;
+            margin: 0;
+            padding: 1em; /*nao esta herdando mais o tamanho do p da linha 17, e sim o tamanho do font-size dentro do proprio elemento, ou seja, esta valendo 10px. Conforme o tamanho da fonte aumenta, o padding aumenta junto.*/
+            font-size: 2rem; /*20px*/
+        }
+
+        .viewport-container{
+            font-size: 3rem;
+            height: auto;
+        }
+
+        .viewport{
+            width: 90vw;
+            height: 90vh; 
+            background-color: violet;
+        }
+
+        .em{
+            width: 20em; /*320px por causa da font-size*/
+            padding: 1em;
+            margin: 1em;
+            background-color: pink;
+            font-size: 2em; /*20px*/
+        }
+
+        .ch{
+            width: 20ch; /* mais ou menos 20 caracteres de largura*/
+            padding: 1em;
+            margin: 1em;
+            background-color: pink;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unidade de medidas</h1>
+    <p>Lorem ipsum dolor, <b>texto em negrito</b> sit amet consectetur adipisicing elit. Non quam quaerat voluptatem eligendi exercitationem
+        enim, sed quas maxime praesentium quae sint quis laborum dolorem neque eius beatae consequatur ab ipsum!</p>
+
+    <div class="porcentagem">
+        <p>Unidade de medida %</p>
+    </div>
+
+    <div class="padding-em">
+        <p>Padding com em</p>
+    </div>
+
+    <div class="porcentagem viewport-container">
+        Porcentagem
+        <div class="viewport">
+            Viewport
+        </div>
+    </div>
+
+    <div class="em">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius officiis cum ipsum vitae provident temporibus vel rem corrupti officia fuga.
+    </div>
+
+    <div class="ch">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore voluptates deserunt quo incidunt adipisci aspernatur perspiciatis provident excepturi sit ad.
+    </div>
+</body>
+
+</html>
