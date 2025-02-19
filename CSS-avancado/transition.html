@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt br">
+<head>
+    <meta charset="UTF-8">
+    <title>Transition</title>
+
+    <style>
+        div{
+            background-color: orange;
+            width: 200px;
+            height: 150px;
+            margin: 100px auto;
+            transition-property: width, height, background-color; /*para dizer em qual propriedade quer fazer a animação*/
+            transition-duration: .5s, 1s, .8s; /*quanto tempo a animação vai durar*/
+            transition-timing-function: ease-in; /*linear vai fazer com que do começo ao fim nao tenha aceleração ou desaceleração. O ease começa rapido, desacelera no meio e depois acelera novamente no final. O ease-in que começa lento e acelera ao longo do tempo. O ease-out que começa rapido e desacelera no final. E o ease-in-out que começa lento, acelera no meio e desacelera no final.*/
+            transition-delay: 0s, .5s, .3s; /*atrasa a animação*/
+
+            /*transition: property(all) duration(0s) function(ease) delay(0s) - aqui esta a ordem e valores padrões*/
+            transition: width .5s ease-in 0s,  height 1s ease-in .5s, background-color .8s ease-in .3s; /*isso é as linhas de cima mas resumido*/
+        }
+
+        div:hover{
+            width: 400px;
+            height: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+</html>

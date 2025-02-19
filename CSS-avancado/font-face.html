@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Font-face</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        @font-face {
+            font-family: nadia;
+            src: local("Nadia Serif"),
+                local("Nadia-Serif"),
+                url(./fonts/nadia/nadia-serif.ttf) format("truetype"),
+                /*ttf tem um bom suporte, mas se o browser nao ler esse, tem mais opções*/
+                url(./fonts/nadia/nadia-serif.woff) format("woff"),
+                url(./fonts/nadia/nadia-serif.svg) format("svg");
+        }
+
+        h1 {
+            font-family: nadia;
+        }
+
+        p {
+            font-family: "Roboto", serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Font-face</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aliquam temporibus cum fugiat! Maxime
+        explicabo cupiditate fugiat, error reprehenderit eaque praesentium beatae consequatur, esse ducimus voluptas
+        ipsum accusamus quidem. Sit?</p>
+</body>
+
+</html>
