@@ -6,10 +6,9 @@
 }
 
 body {
-  width: 98%;
+  width: 100vw;
   font-family: "Roboto", serif;
   color: #555;
-  margin: 1rem;
 }
 
 .header {
