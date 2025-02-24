@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        details{
+            color: blue;
+            background-color: aquamarine;
+            margin-bottom: 1em;
+            padding: .5em;
+        }
+
+        details summary{
+            cursor: pointer;
+        }
+
+        details[open]{
+            background-color: #a6eff1;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Curso Web Desing</h1>
+    <details open>
+        <summary>Pré-requisitos</summary><!--primeiro elemento de details tem que ser summary-->
+        <p>Para fazer esse curso é necessario conhecimento de Sitema Operacional</p>
+    </details>
+
+    <details>
+        <summary>Carga horaria</summary>
+        <p>180 horas</p>
+    </details>
+</body>
+
+</html>
