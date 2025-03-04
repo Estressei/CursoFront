@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+
+    <style>
+        textarea { 
+            resize: none;/*tirta a possibilidade do usuario mexer no tamanho textarea*/
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Introdução</legend>
+            <label for="">Email</label>
+            <br>
+            <input type="email" name="email" placeholder="meuemail@exemplo.com"
+
+            <br><br>
+
+            <label for="filhos">Quantidade de dependentes</label>
+            <br>
+            <input type="number" id="filhos" min="0">
+
+            <br><br>
+
+            <label for="">Data de nascimento</label>
+            <input type="date" max="2025-01-31"> <!-- ano-mes-dia -->
+
+            <br><br>
+
+            Possui atividade extra?
+            <label>
+                <input type="radio" name="ativ" value="s">Sim
+            </label>
+            <label>
+                <input type="radio" name="ativ" value="n">Não
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Área de interesse</legend>
+
+            <label>
+                <input type="checkbox" name="interesse" value="html">HTML
+            </label>
+
+            <label>
+                <input type="checkbox" name="interesse" value="css">CSS
+            </label>
+
+            <label>
+                <input type="checkbox" name="interesse" value="javascript">Javascript
+            </label>
+
+            <label>
+                <input type="checkbox" name="interesse" value="python">Python
+            </label>
+
+            <label>
+                <input type="checkbox" name="interesse" value="java">Java
+            </label>
+
+            <br><br>
+
+            <label>Escolha uma linguagem:
+                <br>
+                <select name="linguagem" required multiple size="8">
+                    <option value="">Selecione uma opção</option>
+
+                    <optgroup label="Frontend">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">Javascript</option>
+                    </optgroup>
+
+                    <optgroup label="Backend">
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                    </optgroup>
+                </select>
+
+                <input type="text" list="linguagemList">
+                <datalist id="linguagemList">
+                    <option value="HTML">
+                    <option value="CSS">
+                    <option value="Javascript">
+                    <option value="Python">
+                    <option value="Java">
+                    <option value="PHP">
+                </datalist>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Mensagem</legend>
+            <textarea name="msg" cols="30" rows="10" maxlength="1000"></textarea>
+            <br><br>
+
+            <textarea cols="30" rows="10" disabled>Contrato de utilização</textarea> <!-- readonly apenas leitura e disabled tambem é somentre leitura mas fica mais opaco-->
+            <label>
+                <input type="checkbox" checked>Li e aceito o contrato <!-- checked deixa habilitado por padrao-->
+            </label>
+            <br><br>
+
+            <input type="file">
+            <br><br>
+
+            <input type="search"> <!-- coloca um x caso queira limpar o que foi escrito-->
+            <br><br>
+
+            <input type="range" min="0" max="10" step="2"> <!-- barra que aumenta e diminui conforme o usuario queira-->
+            <br><br>
+
+            <input type="time">
+            <br><br>
+
+            <input type="color">
+        </fieldset>
+
+        <input type="hidden" value="segredo123"> <!-- dados escondidos do usuario-->
+
+        <br><br><br>
+        <input type="submit" value="Mandar">
+        <input type="button" value="Botão"> <!-- nao reclama se nao coloca nada, pois ele nao envia o formulario, usado normalmente quando se tem js quer vai fazer alguma validação no codigo, mas não pe pra manda o formulario-->
+
+        <button type="submit"> <em>Mandar com tag button</em></button> <!-- unica diferença é onde coloca o valor que aparecerá no browser e que aqui da pra colocar tag dentro dele-->
+        <button type="button"> <b>Outra tag button</b></button> <!-- mesmo comportamentro que o input type button, precisa de uma programação js para fazer uma ação-->
+    </form>
+</body>
+
+</html>
