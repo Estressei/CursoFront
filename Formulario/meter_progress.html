@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt br">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Meter e Progress</title>
+</head>
+<body>
+    <h1>Meter</h1>
+
+    <label for="combustivel">Nivel do combustivel  <!--pode colocar meter dentro de uma label-->
+        <br>
+        <meter id="combustivel" min="0" max="100" low="30" high="90" value="50"></meter> <!--representa uma regua-->
+        <br>
+        <meter id="combustivel" min="0" max="100" low="30" high="90" value="95"></meter>
+        <br>
+        <meter id="combustivel" min="0" max="100" low="30" high="90" value="25"></meter>
+        <br>
+        <meter id="combustivel" min="0" max="100" low="30" high="90" value="25" optimum="95"></meter> <!--optimum quer dizer valor ideal, e se eu colocar que o valor ideal é abaixo do low ou acima do high, quando value for esse valor, a barrinha fica verde. E se coloca o value menor que o low, fica vermelho-->
+    </label>
+
+    <h1>Progress</h1>
+
+    <label> Pocentagem da tarefa <!--recomendado colocar progress dentro de uma label-->
+        <progress max="100" value="50"> 50% </progress> <!--representa uma porcentagem. E esse 50%nao mostra no browser, mas é bom coloca caso o browser nao leia a tag-->
+    </label>
+
+    <form oninput="result.value = a.value * b.value"> <!--java-->
+        <input type="number" name="a" id="a"> X
+        <input type="number" name="b" id="b"> =
+        <output name="result" for="a b"></output> <!--mostra uma valor para o usuario-->
+    </form>
+</body>
+</html>
